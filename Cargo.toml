@@ -1,0 +1,23 @@
+[package]
+name = "taper"
+version = "0.1.0"
+edition = "2021"
+license-file = "LICENSE"
+
+[dependencies]
+anyhow = "1.0.86"
+bytes = "1.6.1"
+clap = { version = "4.5.9", features = ["derive"] }
+env_logger = "0.11.3"
+futures = "0.3.30"
+log = "0.4.22"
+rtnetlink = "0.14.1"
+tokio = { version = "1.43.0", features = [
+    "io-std",
+    "io-util",
+    "rt",
+    "net",
+    "macros",
+] }
+tokio-util = { version = "0.7.11", features = ["codec"] }
+tun = { version = "0.6.1", features = ["async"] }
